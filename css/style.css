@@ -10,6 +10,73 @@
 
 }
 
+
+
+[data-theme="dark"]{
+    background-color:#121212;
+    color: #fff;
+}
+
+[data-theme="dark"] body{
+    background-color:#121212;
+    color: #fff;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] .navbar{
+    background: #1b1b1b;
+}
+
+[data-theme="dark"] select
+[data-theme="dark"] .card,
+[data-theme="dark"] .contact-form,
+[data-theme="dark"] .info-box,
+[data-theme="dark"] footer{
+    background: #1e1e1e;
+    color: white;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select{
+    background: #2b2b2b;
+    color: white;
+    border: 1px solid #555;
+}
+
+[data-theme="dark"] a{
+    color: #4da3ff;
+}
+
+
+
+[data-theme="dark"] .programme,
+[data-theme="dark"] .programme h2,
+[data-theme="dark"] .programme p,
+[data-theme="dark"] .programme table,
+[data-theme="dark"] .programme th
+[data-theme="dark"] .programme td{
+    color: #fff;
+}
+
+[data-theme="dark"] table{
+    background: #1f1f1f
+}
+
+[data-theme="dark"] th{
+    background: #2c5aa0;
+    color: #fff;
+}    
+[data-theme="dark"] td{
+    background: #222;
+    color: #fff;
+    border-color: #444;
+}
+
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +88,7 @@ body{
     background: var(--light);
     color: var(--dark);
     line-height: 1.6;
+    transition:.4s;
 }
 
 a{
@@ -50,7 +118,22 @@ img{
     padding: 18px 8%;
     background: rgba(255,255,255,.95);
     backdrop-filter: blur(8px);
+    transition:all 0.3s ease;
+    
     z-index: 1000;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+}
+header.scrolled{
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .logo{
@@ -699,7 +782,7 @@ tr:hover{
     font-size: 22px;
 }
 
-.speaker-card h4{
+.speaker-card h4{ 
     color: #0D6EFD;
     margin-bottom: 8px 0;
 }
@@ -767,7 +850,7 @@ tr:hover{
 /*==formulaire==*/
 
 .contact-form{
-    background: #fff;
+    background:var(--card-color);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
@@ -813,7 +896,7 @@ tr:hover{
 /*==information de contact==*/
 
 .contact-info{
-    background: white;
+    background:var(--card-color);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
